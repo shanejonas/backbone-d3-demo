@@ -14,15 +14,14 @@ class BarChart extends Backbone.View
   initialize: (options)->
     @$vis = d3.select(@el)
     @collection.on 'reset', @render, @
-    Grid.on 'change', @render, @
     @title = options.title || 'MyBarChart'
     @multiplier = options.multiplier || 1
+    ($ window).on 'resize', => @render()
 
   render: ->
     @$el.empty()
     @$el.append("<h1>#{@title}</h1>")
-    boundary = Grid.get('boundary')
-    if boundary is Infinity then boundary = window.innerWidth
+    boundary = window.innerWidth
     chart = @$vis.selectAll('div').data(@collection.toJSON())
     chart.enter()
       .append('div')

@@ -13,7 +13,7 @@
     "express": "~3.0.0rc3"
   },
   "devDependencies": {
-    "browserify": "1.15.3",
+    "browserify": "1.15.3"
   },
   "template": {
     "entry": "./src/bootstrap.coffee",
