@@ -2,7 +2,6 @@
 path = require 'path'
 domino = require 'domino'
 browserify = require 'browserify'
-fileify = require 'fileify'
 express = require 'express'
 fs = require 'fs'
 

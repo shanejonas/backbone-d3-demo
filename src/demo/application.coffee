@@ -1,4 +1,4 @@
-$ = require 'jquery'
+$ = require 'jqueryify'
 Backbone = require('backbone')
 Backbone.setDomLibrary($)
 d3 = require 'd3'
